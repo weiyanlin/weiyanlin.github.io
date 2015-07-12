@@ -1,0 +1,133 @@
+---
+layout: post
+title: "Hello!"
+date: 2015-07-12 21:55:31 +0800
+comments: true
+categories: 
+---
+
+### 又搬家了
+上次從 Blogspot 搬到 Logdown，
+
+原因是覺得可以用 Markdown 寫文章挺方便的，
+
+這次決定跟隨朋友的步伐來到 Github Pages，
+
+因為不但是 Markdown 還有版本控制，
+
+希望是最後一次搬家啦!
+
+順便記錄一下自己設定 Github Pages 的過程...
+
+<!-- more -->
+
+### Github Pages 的設定
+
+#### Ruby
+後來決定用 Octopress + Github Pages，
+
+之前沒裝 Ruby 但是有裝 Homebrew on MAC OSX，
+
+於是用 Homebrew 來裝 Ruby，
+
+```
+$ brew install rbenv
+$ brew install ruby-build
+```
+
+為了 Octopress 裝 Ruby 1.9.3，
+
+```
+$ rbenv install 1.9.3-p0
+$ rbenv local 1.9.3-p0
+$ rbenv rehash
+```
+
+#### Octopress
+之前已經用 Homebrew 裝好 Git 了，
+
+```
+$ git clone git://github.com/imathis/octopress.git octopress
+$ cd octopress
+$ gem install bundler
+$ rbenv rehash
+$ bundle install
+$ rake install    # install the default Octopress theme
+```
+
+#### Github Pages
+先去 Github 網頁開一個新的 repository，
+
+而 repository 名稱必須是 `username.github.io`，
+
+開好以後先不要有任何 commit，交由 Octopress 來處理，
+
+```
+$ rake setup_github_pages
+```
+
+此時 rake 會詢問 Github repo 的 URL，
+
+e.g., `git@github.com:username/username.github.io.git`，
+
+```
+$ rake generate
+$ rake deploy
+```
+
+就會產生網頁並發佈，
+
+可以到`username.github.io`查看產生出來的網頁，
+
+記得將以上的變動 commit，
+
+```
+$ git add .
+$ git commit -m 'commit after rake deploy'
+$ git push origin source
+```
+
+在`_config.yml`可以更改 title, subtitle, author...等的資訊。
+
+#### 發表新文章
+
+```
+$ rake new_post["title"]
+```
+
+Octopress 會在`source/_posts/`底下產生一個檔案，
+
+就可以開始編輯這個檔案並發佈，
+
+正式發布前可以先預覽網頁，
+
+```
+$ rake preview
+```
+
+然後用瀏覽器連到`localhost:4000`來預覽，
+
+若 port 4000 已經先被其他應用佔用，
+
+可以到`Rakefile`更改`server_port`，
+
+e.g., `server_port = "4400"`，
+
+接下來就是
+
+```
+$ rake deploy
+```
+
+並 commit 新的變動就完成了!
+
+***
+
+#### 參考資料
+- [國王的驢耳朵: 安裝octopress並佈署到github Pages上面](http://wen00072.github.io/blog/2015/03/25/octopress-installed-and-deployed-on-the-github-pages/)
+- [Installing Ruby With Rbenv](http://octopress.org/docs/setup/rbenv/)
+- [Octopress Setup](http://octopress.org/docs/setup/)
+- [Deploying to Github Pages](http://octopress.org/docs/deploying/github/)
+- [Configuring Octopress](http://octopress.org/docs/configuring/)
+- [Blogging Basics](http://octopress.org/docs/blogging/)
+- [How to change Port number for Octopress rake preview](http://sharadchhetri.com/2014/01/14/change-port-number-octopress-rake-preview/)
