@@ -3,9 +3,11 @@
 # ----------------------- #
 
 url: http://weiyanlin.github.io
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+#title: My Octopress Blog
+title: "MISC"
+#subtitle: A blogging framework for hackers.
+subtitle: "weiyanlin's blog"
+author: Wei-Yan Lin
 simple_search: https://www.google.com/search
 description:
 
