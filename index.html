@@ -9,7 +9,8 @@
   <meta name="author" content="Wei-Yan Lin">
 
   
-  <meta name="description" content="又搬家了 上次從 Blogspot 搬到 Logdown， 原因是覺得可以用 Markdown 寫文章挺方便的， 這次決定跟隨朋友的步伐來到 Github Pages， 因為不但是 Markdown 還有版本控制， 希望是最後一次搬家啦! 順便記錄一下自己設定 Github Pages 的過程& &hellip;">
+  <meta name="description" content="今天心血來潮去 _config.yml 裡面把一些 3rd party 的功能開來用， 沒想到 rake generate 時出現 rake aborted!， 看一下敘述直覺是前幾天 homebrew 更新 openssl 造成的， 搜尋並試了一些方法後終於用下面這個方法解掉這個問題， 1
+2 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -83,6 +84,67 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2015/07/18/rake-abort/">Rake Aborted!</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-07-18T15:10:59+08:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>18</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>3:10 pm</span></time>
+        
+           | <a href="/blog/2015/07/18/rake-abort/#disqus_thread"
+             data-disqus-identifier="http://weiyanlin.github.io/blog/2015/07/18/rake-abort/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>今天心血來潮去 <code>_config.yml</code> 裡面把一些 3rd party 的功能開來用，</p>
+
+<p>沒想到 <code>rake generate</code> 時出現 <code>rake aborted!</code>，</p>
+
+<p>看一下敘述直覺是前幾天 <code>homebrew</code> 更新 <code>openssl</code> 造成的，</p>
+
+<p>搜尋並試了一些方法後終於用下面這個方法解掉這個問題，</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ rvm get stable
+</span><span class='line'>$ rvm reinstall ruby-1.9.3-p0
+</span><span class='line'>$ rvm gemset pristine
+</span><span class='line'>$ rvm gemset empty mygemset
+</span><span class='line'>$ gem install bundler
+</span><span class='line'>$ bundle install</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<h4>參考資料</h4>
+
+<ul>
+<li><a href="http://stackoverflow.com/questions/25492787/ruby-bundle-symbol-not-found-sslv2-client-method-loaderror">Ruby Bundle Symbol not found: _SSLv2_client_method (LoadError)</a></li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2015/07/12/hello/">Hello!</a></h1>
     
     
@@ -138,6 +200,10 @@
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/07/18/rake-abort/">Rake Aborted!</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2015/07/12/hello/">Hello!</a>

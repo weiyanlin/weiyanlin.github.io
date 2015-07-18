@@ -4,7 +4,7 @@
   <title><![CDATA[MISC]]></title>
   <link href="http://weiyanlin.github.io/atom.xml" rel="self"/>
   <link href="http://weiyanlin.github.io/"/>
-  <updated>2015-07-18T11:36:06+08:00</updated>
+  <updated>2015-07-18T15:14:13+08:00</updated>
   <id>http://weiyanlin.github.io/</id>
   <author>
     <name><![CDATA[Wei-Yan Lin]]></name>
@@ -12,6 +12,44 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Rake Aborted!]]></title>
+    <link href="http://weiyanlin.github.io/blog/2015/07/18/rake-abort/"/>
+    <updated>2015-07-18T15:10:59+08:00</updated>
+    <id>http://weiyanlin.github.io/blog/2015/07/18/rake-abort</id>
+    <content type="html"><![CDATA[<p>今天心血來潮去 <code>_config.yml</code> 裡面把一些 3rd party 的功能開來用，</p>
+
+<p>沒想到 <code>rake generate</code> 時出現 <code>rake aborted!</code>，</p>
+
+<p>看一下敘述直覺是前幾天 <code>homebrew</code> 更新 <code>openssl</code> 造成的，</p>
+
+<p>搜尋並試了一些方法後終於用下面這個方法解掉這個問題，</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ rvm get stable
+</span><span class='line'>$ rvm reinstall ruby-1.9.3-p0
+</span><span class='line'>$ rvm gemset pristine
+</span><span class='line'>$ rvm gemset empty mygemset
+</span><span class='line'>$ gem install bundler
+</span><span class='line'>$ bundle install</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<h4>參考資料</h4>
+
+<ul>
+<li><a href="http://stackoverflow.com/questions/25492787/ruby-bundle-symbol-not-found-sslv2-client-method-loaderror">Ruby Bundle Symbol not found: _SSLv2_client_method (LoadError)</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Hello!]]></title>
