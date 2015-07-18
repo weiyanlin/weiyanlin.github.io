@@ -4,7 +4,7 @@
   <title><![CDATA[MISC]]></title>
   <link href="http://weiyanlin.github.io/atom.xml" rel="self"/>
   <link href="http://weiyanlin.github.io/"/>
-  <updated>2015-07-18T15:17:50+08:00</updated>
+  <updated>2015-07-18T21:07:41+08:00</updated>
   <id>http://weiyanlin.github.io/</id>
   <author>
     <name><![CDATA[Wei-Yan Lin]]></name>
@@ -12,6 +12,50 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[開啟留言板]]></title>
+    <link href="http://weiyanlin.github.io/blog/2015/07/18/comments/"/>
+    <updated>2015-07-18T21:07:40+08:00</updated>
+    <id>http://weiyanlin.github.io/blog/2015/07/18/comments</id>
+    <content type="html"><![CDATA[<p>查了一下發現蠻多 octopress 的使用者會用 <a href="http://disqus.com">Disqus</a> 來做留言板，</p>
+
+<p>先去 <a href="http://disqus.com">Disqus</a> 申請一個帳號，</p>
+
+<p>然後在 <code>_config.yml</code> 裡面設定，</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># Disqus Comments
+</span><span class='line'>disqus_short_name: weiyanlin
+</span><span class='line'>disqus_show_comment_count: true</span></code></pre></td></tr></table></div></figure>
+
+
+<p>一開始的時候我遇到了留言板沒有正常 load 的問題，</p>
+
+<p>查了一下發覺應該是我的 Disqus 沒有設定完全，</p>
+
+<p>要去 Disqus <code>Settings</code> 下的 <code>Add Disqus to Site</code>，</p>
+
+<p><img src="https://lh3.googleusercontent.com/PG6xdXIafgyoHlI257eosCIjZbrY482eEs-1c0GSOuPW=w218-h297-no" alt="" /></p>
+
+<p>將空格填一填儲存，</p>
+
+<p><img src="https://lh3.googleusercontent.com/Psdc4gowKJeaTaIZBDBcRBvCxivRt5brSgDby-_24QJH=w498-h327-no" alt="" /></p>
+
+<p>留言板就可以正常運作了!</p>
+
+<hr />
+
+<h3>參考資料</h3>
+
+<ul>
+<li><a href="http://hal.case.edu/~rrc/blog/2013/09/29/disqus-comments-not-visible/">Troubleshooting Octopress - Disqus Comments Not Visible</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Rake Aborted!]]></title>
