@@ -4,7 +4,7 @@
   <title><![CDATA[MISC]]></title>
   <link href="http://weiyanlin.github.io/atom.xml" rel="self"/>
   <link href="http://weiyanlin.github.io/"/>
-  <updated>2015-07-18T15:14:13+08:00</updated>
+  <updated>2015-07-18T15:16:25+08:00</updated>
   <id>http://weiyanlin.github.io/</id>
   <author>
     <name><![CDATA[Wei-Yan Lin]]></name>
@@ -42,7 +42,7 @@
 
 <hr />
 
-<h4>參考資料</h4>
+<h3>參考資料</h3>
 
 <ul>
 <li><a href="http://stackoverflow.com/questions/25492787/ruby-bundle-symbol-not-found-sslv2-client-method-loaderror">Ruby Bundle Symbol not found: _SSLv2_client_method (LoadError)</a></li>
@@ -189,7 +189,7 @@
 
 <hr />
 
-<h4>參考資料</h4>
+<h3>參考資料</h3>
 
 <ul>
 <li><a href="http://wen00072.github.io/blog/2015/03/25/octopress-installed-and-deployed-on-the-github-pages/">國王的驢耳朵: 安裝octopress並佈署到github Pages上面</a></li>
