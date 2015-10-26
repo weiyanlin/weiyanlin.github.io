@@ -5,12 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Rake Aborted! - MISC</title>
+  <title>Mazda3 - MISC</title>
   <meta name="author" content="Wei-Yan Lin">
 
   
-  <meta name="description" content="今天心血來潮去 _config.yml 裡面把一些 3rd party 的功能開來用， 沒想到 rake generate 時出現 rake aborted!， 看一下敘述直覺是前幾天 homebrew 更新 openssl 造成的， 搜尋並試了一些方法後終於用下面這個方法解掉這個問題， 1
-2 &hellip;">
+  <meta name="description" content="距離上次發文過了好久， 更新一下近況， 這幾個月來有點忙，因為要迎接家中的新成員， 週末的時間不是跑醫院診所就是跑婦嬰用品店， 意外發現新竹是北部婦嬰用品店的聖地XD 從新竹市的藍印子、媽媽的店到竹北的POMPOM和俏媽咪， 看到很多網誌分享外縣市來新竹婦嬰用品店一日遊&hellip; &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://weiyanlin.github.io/blog/2015/07/18/rake-abort/">
+  <link rel="canonical" href="http://weiyanlin.github.io/blog/2015/10/26/mazda3/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="MISC" type="application/atom+xml">
@@ -81,7 +80,7 @@
   
   <header>
     
-      <h1 class="entry-title">Rake Aborted!</h1>
+      <h1 class="entry-title">Mazda3</h1>
     
     
       <p class="meta">
@@ -90,7 +89,7 @@
 
 
 
-<time class='entry-date' datetime='2015-07-18T15:10:59+08:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>18</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>3:10 pm</span></time>
+<time class='entry-date' datetime='2015-10-26T13:47:54+08:00'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>26</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>1:47 pm</span></time>
         
            | <a href="#disqus_thread"
              data-disqus-identifier="http://weiyanlin.github.io">Comments</a>
@@ -100,36 +99,66 @@
   </header>
 
 
-<div class="entry-content"><p>今天心血來潮去 <code>_config.yml</code> 裡面把一些 3rd party 的功能開來用，</p>
+<div class="entry-content"><p>距離上次發文過了好久，</p>
 
-<p>沒想到 <code>rake generate</code> 時出現 <code>rake aborted!</code>，</p>
+<p>更新一下近況，</p>
 
-<p>看一下敘述直覺是前幾天 <code>homebrew</code> 更新 <code>openssl</code> 造成的，</p>
+<p>這幾個月來有點忙，因為要迎接家中的新成員，</p>
 
-<p>搜尋並試了一些方法後終於用下面這個方法解掉這個問題，</p>
+<p>週末的時間不是跑醫院診所就是跑婦嬰用品店，</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ rvm get stable
-</span><span class='line'>$ rvm reinstall ruby-1.9.3-p0
-</span><span class='line'>$ rvm gemset pristine
-</span><span class='line'>$ rvm gemset empty mygemset
-</span><span class='line'>$ gem install bundler
-</span><span class='line'>$ bundle install</span></code></pre></td></tr></table></div></figure>
+<p>意外發現新竹是北部婦嬰用品店的聖地XD</p>
+
+<p>從新竹市的藍印子、媽媽的店到竹北的POMPOM和俏媽咪，</p>
+
+<p>看到很多網誌分享外縣市來新竹婦嬰用品店一日遊&hellip;</p>
+
+<p>其中最花錢的一項就是新車了(喂，這不是婦嬰用品吧)，</p>
+
+<p>主要是目前開的Fit主被動安全配備相當薄弱，</p>
+
+<p>套個PTT Car版的安全標準，至少也要6安加上循跡防滑，</p>
+
+<p>6安以上才會有後座氣簾，</p>
+
+<p>循跡防滑曾經聽過有人說下雨天就慢慢開呀，</p>
+
+<p>但是你不能保證你開高速公路的時候都不會下雨&hellip;</p>
+
+<p>更不能保證高速公路的路都是平的沒有水灘&hellip;.</p>
+
+<p>總之我是信了。</p>
+
+<!-- more -->
 
 
-<hr />
+<p>於是開始研究車子，</p>
 
-<h3>參考資料</h3>
+<p>需求是安全>妥善率、後勤>空間(後車廂可以放嬰兒車就好)>外型，</p>
 
-<ul>
-<li><a href="http://stackoverflow.com/questions/25492787/ruby-bundle-symbol-not-found-sslv2-client-method-loaderror">Ruby Bundle Symbol not found: _SSLv2_client_method (LoadError)</a></li>
-</ul>
+<p>在mobile01和PTT Car版爬文選出候選車的過程就不提了，</p>
 
+<p>實際試駕了Subaru Impreza和Mazda 3，</p>
+
+<p>老實說雖然Impreza馬力比較小，但是開起來真的還不錯，</p>
+
+<p>而且還有稅金的優勢，</p>
+
+<p>不過代理商最近出包連連讓人無法放心，</p>
+
+<p>在一樣安全的情況下(IIHS撞擊測試皆為top safety pick+)，</p>
+
+<p>小弟就情投馬三了，</p>
+
+<p>馬三算是今年台灣的風雲車款，</p>
+
+<p>如同眾多人的評價，除了空間沒什麼好嫌的(好啦，稅金還是要嫌一下)，</p>
+
+<p>最後終於在前幾週下訂，不過排隊牽車要排到11月中以後，</p>
+
+<p>這不但是婦嬰用品最大宗的花費也是小弟目前人生最大筆的花費&hellip;</p>
+
+<p>總之這幾個月有點忙也花了大錢，明年二月就要爸氣十足了。</p>
 </div>
 
 
@@ -145,7 +174,7 @@
 
 
 
-<time class='entry-date' datetime='2015-07-18T15:10:59+08:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>18</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>3:10 pm</span></time>
+<time class='entry-date' datetime='2015-10-26T13:47:54+08:00'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>26</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>1:47 pm</span></time>
       
 
 
@@ -153,7 +182,7 @@
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://weiyanlin.github.io/blog/2015/07/18/rake-abort/" data-via="" data-counturl="http://weiyanlin.github.io/blog/2015/07/18/rake-abort/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://weiyanlin.github.io/blog/2015/10/26/mazda3/" data-via="" data-counturl="http://weiyanlin.github.io/blog/2015/10/26/mazda3/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -166,10 +195,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2015/07/12/hello/" title="Previous Post: Hello!">&laquo; Hello!</a>
+        <a class="basic-alignment left" href="/blog/2015/07/18/comments/" title="Previous Post: 開啟留言板">&laquo; 開啟留言板</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2015/07/18/comments/" title="Next Post: 開啟留言板">開啟留言板 &raquo;</a>
       
     </p>
   </footer>
@@ -231,8 +258,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://weiyanlin.github.io/blog/2015/07/18/rake-abort/';
-        var disqus_url = 'http://weiyanlin.github.io/blog/2015/07/18/rake-abort/';
+        var disqus_identifier = 'http://weiyanlin.github.io/blog/2015/10/26/mazda3/';
+        var disqus_url = 'http://weiyanlin.github.io/blog/2015/10/26/mazda3/';
         var disqus_script = 'embed.js';
       
     (function () {
