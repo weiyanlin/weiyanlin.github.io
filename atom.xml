@@ -4,7 +4,7 @@
   <title><![CDATA[MISC]]></title>
   <link href="http://weiyanlin.github.io/atom.xml" rel="self"/>
   <link href="http://weiyanlin.github.io/"/>
-  <updated>2016-06-22T18:25:35+08:00</updated>
+  <updated>2016-08-15T12:32:35+08:00</updated>
   <id>http://weiyanlin.github.io/</id>
   <author>
     <name><![CDATA[Wei-Yan Lin]]></name>
@@ -12,6 +12,17 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[JUMP To]]></title>
+    <link href="http://weiyanlin.github.io/blog/2016/08/15/jump-to/"/>
+    <updated>2016-08-15T12:30:45+08:00</updated>
+    <id>http://weiyanlin.github.io/blog/2016/08/15/jump-to</id>
+    <content type="html"><![CDATA[<p>BJ4</p>
+
+<p><a href="http://wylinblog.blogspot.com">http://wylinblog.blogspot.com</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[關於托嬰中心]]></title>
